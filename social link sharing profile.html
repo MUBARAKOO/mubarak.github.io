@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Social Link Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #f4f4f9;
+            --card-bg: #fff;
+            --text: #222;
+            --bio: #666;
+            --link-bg: #4f8cff;
+            --link-bg-hover: #2563eb;
+            --avatar-border: #4f8cff;
+        }
+        body {
+            background: var(--bg);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text);
+            transition: background 0.3s, color 0.3s;
+        }
+        .profile-card {
+            background: var(--card-bg);
+            margin-top: 60px;
+            padding: 2rem 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--avatar-border);
+            transition: border 0.3s;
+        }
+        .name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .bio {
+            color: var(--bio);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #fff;
+            background: var(--link-bg);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .social-link:hover {
+            background: var(--link-bg-hover);
+        }
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+        .theme-toggle {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+        .theme-toggle:hover {
+            background: #e0e7ef;
+        }
+        .theme-toggle svg {
+            width: 28px;
+            height: 28px;
+            fill: #4f8cff;
+            transition: fill 0.3s;
+        }
+        body.dark {
+            --bg: #181a20;
+            --card-bg: #23262f;
+            --text: #f4f4f9;
+            --bio: #b0b3b8;
+            --link-bg: #2563eb;
+            --link-bg-hover: #4f8cff;
+            --avatar-border: #2563eb;
+        }
+        body.dark .theme-toggle:hover {
+            background: #23262f;
+        }
+        body.dark .theme-toggle svg {
+            fill: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <!-- Moon SVG -->
+        <svg viewBox="0 0 24 24">
+            <path d="M21.75 15.5a9.25 9.25 0 0 1-11.25-11.25 1 1 0 0 0-1.21-1.21A10.75 10.75 0 1 0 22.96 16.71a1 1 0 0 0-1.21-1.21z"/>
+        </svg>
+    </button>
+    <div class="profile-card">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Profile Picture">
+        <div class="name">Mubarak Oyelowo</div>
+        <div class="bio">Web developer & tech enthusiast. Sharing my favorite links!</div>
+        <div class="social-links">
+            <a class="social-link" href="https://github.com/MUBARAKOO" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.09.79 2.2 0 1.59-.01 2.87-.01 3.26 0 .31.21.67.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/></svg>
+                GitHub
+            </a>
+            <a class="social-link" href="https://x.com/__mubii?s=11" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M22.46 5.92c-.77.34-1.6.57-2.47.67a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.13 12.13 0 0 1 3.1 4.86a4.28 4.28 0 0 0 1.32 5.71c-.7-.02-1.36-.21-1.94-.53v.05a4.28 4.28 0 0 0 3.43 4.19c-.33.09-.68.14-1.04.14-.25 0-.5-.02-.74-.07a4.29 4.29 0 0 0 4 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57a8.7 8.7 0 0 0 2.14-2.22z"/></svg>
+                Twitter
+            </a>
+            <a class="social-link" href="https://linkedin.com/in/mubarak-oyelowo-b394391a5" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+                LinkedIn
+            </a>
+            <a class="social-link" href="https://www.instagram.com/mub_ic/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41a4.92 4.92 0 0 1 1.77 1.03 4.92 4.92 0 0 1 1.03 1.77c.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43a4.92 4.92 0 0 1-1.03 1.77 4.92 4.92 0 0 1-1.77 1.03c-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41a4.92 4.92 0 0 1-1.77-1.03 4.92 4.92 0 0 1-1.03-1.77c-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43a4.92 4.92 0 0 1 1.03-1.77 4.92 4.92 0 0 1 1.77-1.03c.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.013 7.052.072 5.77.13 4.74.31 3.89.6a7.07 7.07 0 0 0-2.57 1.64A7.07 7.07 0 0 0 .6 3.89c-.29.85-.47 1.88-.53 3.16C.013 8.332 0 8.736 0 12c0 3.264.013 3.668.072 4.948.058 1.282.24 2.31.53 3.16a7.07 7.07 0 0 0 1.64 2.57 7.07 7.07 0 0 0 2.57 1.64c.85.29 1.88.47 3.16.53C8.332 23.987 8.736 24 12 24s3.668-.013 4.948-.072c1.282-.058 2.31-.24 3.16-.53a7.07 7.07 0 0 0 2.57-1.64 7.07 7.07 0 0 0 1.64-2.57c.29-.85.47-1.88.53-3.16.059-1.28.072-1.684.072-4.948 0-3.264-.013-3.668-.072-4.948-.058-1.282-.24-2.31-.53-3.16a7.07 7.07 0 0 0-1.64-2.57A7.07 7.07 0 0 0 20.11.6c-.85-.29-1.88-.47-3.16-.53C15.668.013 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                Instagram
+            </a>
+        </div>
+
+    </div>
+     <div class="back-btn-container">
+        <a href="portfolio.html" class="back-btn">&larr; Back</a>
+    </div>
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        // Persist theme with localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
